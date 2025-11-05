@@ -5,6 +5,8 @@ import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
 import usuarioRoutes from "./routes/usuario.routes.js"
+import livroRoutes from "./routes/livros.routes.js"
+import avaliacaoRoutes from "./routes/avaliacoes.routes.js"
 
 // ============================
 //  Configuração do servidor
@@ -18,7 +20,8 @@ app.get("/",(req,res)=>{
 })
 
 app.use("/usarios", usuarioRoutes)
-
+app.use("/livros", livroRoutes)
+app.use("/avaliacao", avaliacaoRoutes)
 
 // ============================
 //  Inicia o servidor
